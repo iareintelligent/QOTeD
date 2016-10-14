@@ -17,32 +17,33 @@ function contrastVal(r, g, b) {
   }
 
   rg = xgCalc(r);
+  console.log(r, rg);
   gg = xgCalc(g);
   bg = xgCalc(b);
 
   return .2126*rg + .7152*gg + .0722*bg;
 };
 
-function convert() {
-  var str = Math.floor(Math.random() * 16).toString(16);
-  return str.length == 1 ? "0" + str : str;
-};
-
 function colorPicker() {
-  do while (contrastRatio < 4.5) {
-    var r = Number(convert());
-    var g = Number(convert());
-    var b = Number(convert());
-    var colorTry = luminance(r, g, b);
+  var i = 0;
+  while (contrastRatio < 1) {
+    var r = Math.floor(Math.random() * 255);
+    var g = Math.floor(Math.random() * 255);
+    var b = Math.floor(Math.random() * 255);
+    var colorTry = contrastVal(r, g, b);
     contrastRatio = 1.05/colorTry;
+    // console.log(i, contrastRatio, r, g, b);
+    i++;
   }
-  return 'rgb(' + r + ',' + g + ',' + b + ')';
+  var newColor = "rgb(" + r + "," + g + "," + b + ")";
+  // console.log(newColor);
+  return newColor;
 };
 
 $(document).ready(function() {
-  console.log(colorPicker());
+  // console.log(colorPicker());
   var newColor = colorPicker();
-  $("body").css("background-color", newColor;
+  $("body").css("background-color", newColor);
   $("#quote-box").css("color", newColor);
 
 })
