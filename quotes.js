@@ -32,7 +32,7 @@ var quotes = [{ "quote" : "I hope life isn't a big joke, because I don't get it.
 }, { "quote" : "If your friend is already dead, and being eaten by vultures, I think it's okay to feed some bits of your friend to one of the vultures, to teach him to do some tricks.But ONLY if you're serious about adopting the vulture.   "
 }, { "quote" : "If I ever opened a trampoline store, I don't think I'd call it Trampo-Land, because you might think it was a store for tramps, which is not the impression we are trying to convey with our store.On the other hand, we would not prohibit tramps from browsing, or testing the trampolines, unless a tramp's gyrations seemed to be getting out of control.   "
 }, { "quote" : "If you're an archaeologist, I bet it's real embarrassing to put together a skull from a bunch of ancient bone fragments, but then it turns out it's not a skull but just an old dried-out potato."
-}, { "quote" : "To me, clowns aren't funny.In fact, they're kinda scary.I've wondered where this started, and I think it goes back to the time I went to the circus and a clown killed my dad."
+}, { "quote" : "To me, clowns aren't funny. In fact, they're kinda scary. I've wondered where this started, and I think it goes back to the time I went to the circus and a clown killed my dad."
 }, { "quote" : "Instead of a Seeing Eye dog, what about a gun?It's cheaper than a dog, plus if you walk around shooting all the time people are going to get out of the way.Cars, too!"
 }, { "quote" : "I guess the hard thing for a lot of people to accept is why God would allow me to go running through their yards, yelling and spinning around.   "
 }, { "quote" : "Whenever I need to ``get away,'' I just get away in my mind.I go to my imaginary spot, where the beach is perfect and the water is perfect and the weather is perfect.The only bad thing there are the flies.They're terrible!   "
@@ -312,6 +312,8 @@ var quotes = [{ "quote" : "I hope life isn't a big joke, because I don't get it.
 }, { "quote" : "Blow ye winds, like the trumpet blows; but without that noise.   "
 }, { "quote" : "When I think back on all the blessings I have been given in my life, I can't think of a single one, unless you count that rattlesnake that granted me all those wishes."
 }];
+
+
 
 function newQuote() {
   var quoteID = Math.floor(Math.random() * quotes.length);

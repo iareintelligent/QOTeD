@@ -2,7 +2,6 @@
 #quote-box {
   width: auto;
   background-color: white;
-  color: navy;
   padding: 25px 50px;
   margin: auto;
   border-radius: 5px;
@@ -13,7 +12,6 @@
   text-align: right; }
 
 body {
-  background-color: navy;
   color: white;
   font-family: 'Cabin Sketch', cursive;
   font-weight: bold; }
