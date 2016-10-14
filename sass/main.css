@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
+#new-quote {
+  border-radius: 3px;
+  width: 100%;
+  color: white;
+  height: 40px;
+  font-size: .85em; }
+
 #quote-box {
   width: auto;
   background-color: white;

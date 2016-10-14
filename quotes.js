@@ -1,3 +1,5 @@
+// import {colorPicker} from 'contrastCalc.js';
+
 var quotes = [{ "quote" : "I hope life isn't a big joke, because I don't get it."
 }, { "quote" : " To me, it's always a good idea to always carry two sacks of something when you walk around. That way, if anybody says, 'Hey, can you give me a hand?,' you can say, 'Sorry, got these sacks.'"
 }, { "quote" : "If I ever get real rich, I hope I'm not real mean to poor people, like I am now."
@@ -320,6 +322,49 @@ function newQuote() {
   $("#quote-text").html(quotes[quoteID].quote);
 };
 
-$(document).ready(function() {
+function contrastVal(r, g, b) {
+  function xgCalc(val) {
+    if (val <= 10) {
+      return val/3294;
+    }
+    return (val/269 + .0513)^2.4;
+  }
+
+  var rg = xgCalc(r);
+  var gg = xgCalc(g);
+  var bg = xgCalc(b);
+
+  return .2126*rg + .7152*gg + .0722*bg;
+};
+
+function colorPicker() {
+  var i = 0;
+  var contrastRatio = 0;
+  while (contrastRatio < 1) {
+    var r = Math.floor(Math.random() * 255);
+    var g = Math.floor(Math.random() * 255);
+    var b = Math.floor(Math.random() * 255);
+    var colorTry = contrastVal(r, g, b);
+    contrastRatio = 1.05/colorTry;
+    // console.log(i, contrastRatio, r, g, b);
+    i++;
+  }
+  var newColor = "rgb(" + r + "," + g + "," + b + ")";
+  // console.log(newColor);
+  return newColor;
+};
+
+function updateEverything() {
   newQuote();
+  var newColor = colorPicker();
+  $("body").css("background-color", newColor);
+  $("#quote-box").css("color", newColor);
+  $("#new-quote").css("background-color", newColor);
+}
+
+
+
+$(document).ready(function() {
+  updateEverything();
+  $("#new-quote").on('click', updateEverything);
 });

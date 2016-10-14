@@ -2,7 +2,6 @@
 // normalized to 0 for darkest black and 1 for lightest white.  The point of calculating
 // this value is to ensure that text and background colors are chosen to ensure
 // that web accessibility standards are met.
-
 var contrastRatio = 0;
 var rg = 0;
 var gg = 0;
@@ -42,8 +41,7 @@ function colorPicker() {
 
 $(document).ready(function() {
   // console.log(colorPicker());
-  var newColor = colorPicker();
-  $("body").css("background-color", newColor);
-  $("#quote-box").css("color", newColor);
 
-})
+});
+
+export {colorPicker};
