@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
 #new-quote {
-  border-radius: 3px;
+  border-radius: 50% 50% 0 0;
   width: 100%;
   color: white;
   height: 40px;
-  font-size: .85em; }
+  outline: none;
+  font-size: .85em;
+  margin-bottom: 0;
+  border-style: hidden; }
 
 #quote-box {
   width: auto;
   background-color: white;
-  padding: 25px 50px;
+  padding: 25px 50px 0px;
   margin: auto;
   border-radius: 5px;
   font-weight: 400;
