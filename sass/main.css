@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
+#quote-box {
+  width: auto;
+  background-color: white;
+  color: navy;
+  padding: 25px 50px;
+  margin: auto;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 1.75em; }
+
+#quote-author {
+  text-align: right; }
+
+body {
+  background-color: navy;
+  color: white;
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import "helpers/variables";
+@import "components/buttons";
+@import "components/quoteBox";
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: bold;
+}
